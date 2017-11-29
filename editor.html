@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Binary Crate">
+    <meta name="keyword" content="Code Learn">
+
+    <title>Binary Crate</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+
+    <script src="assets/js/chart-master/Chart.js"></script>
+
+    <!-- Code Mirror -->
+    <link rel=stylesheet href="doc/docs.css">
+    <link rel=stylesheet href=lib/codemirror.css>
+    <script src=lib/codemirror.js></script>
+    <script src=mode/xml/xml.js></script>
+    <script src=mode/javascript/javascript.js></script>
+    <script src=mode/css/css.js></script>
+    <script src=mode/htmlmixed/htmlmixed.js></script>
+    <style type=text/css>
+          .CodeMirror {
+            float: left;
+            width: 50%;
+            border: 1px solid black;
+          }
+          iframe {
+            width: 49%;
+            float: left;
+            height: 600px;
+            border: 1px solid black;
+            border-left: 0px;
+          }
+        </style>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  <section id="container" >
+      <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <!--header start-->
+      <header class="header black-bg">
+              <div class="sidebar-toggle-box">
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+              </div>
+            <!--logo start-->
+            <a href="index.html" class="logo"><b>Binary Crate</b></a>
+            <!--logo end-->
+            <div class="top-menu">
+            	<ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="login.html">Logout</a></li>
+            	</ul>
+            </div>
+        </header>
+      <!--header end-->
+
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+
+              	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+              	  <h5 class="centered">Maya Adams</h5>
+
+                  <li class="mt">
+                      <a class="active" href="index.html">
+                          <i class="fa fa-dashboard"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-code"></i>
+                          <span>Editor</span>
+                      </a>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-desktop"></i>
+                          <span>Classroom</span>
+                      </a>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-comments"></i>
+                          <span>Forum</span>
+                      </a>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-cog"></i>
+                          <span>Settings</span>
+                      </a>
+                  </li>
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+            <div class="row">
+
+              <article>
+                  <textarea id=code name=code>
+                    <!-- Placeholder Code -->
+              <!doctype html>
+                  <html>
+                    <head>
+                      <meta charset=utf-8>
+                      <title>HTML5 canvas demo</title>
+                      <style>p {font-family: monospace;}</style>
+                    </head>
+                    <body>
+                        <p>Canvas pane goes here:</p>
+                        <canvas id=pane width=500 height=400></canvas>
+                        <script>
+                          var canvas = document.getElementById('pane');
+                          var context = canvas.getContext('2d');
+
+                          context.fillStyle = 'rgb(250,0,0)';
+                          context.fillRect(10, 10, 55, 50);
+
+                          context.fillStyle = 'rgba(0, 0, 250, 0.5)';
+                          context.fillRect(30, 30, 55, 50);
+                        </script>
+                      </body>
+                    </html>
+            </textarea>
+                  <iframe id=preview></iframe>
+                  <script>
+                    var delay;
+                    // Initialize CodeMirror editor with a nice html5 canvas demo.
+                    var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+                      mode: 'text/html'
+                    });
+                    editor.on("change", function() {
+                      clearTimeout(delay);
+                      delay = setTimeout(updatePreview, 300);
+                    });
+
+                    function updatePreview() {
+                      var previewFrame = document.getElementById('preview');
+                      var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
+                      preview.open();
+                      preview.write(editor.getValue());
+                      preview.close();
+                    }
+                    setTimeout(updatePreview, 300);
+                  </script>
+                </article>
+
+          </section>
+      </section>
+
+
+      <!--main content end-->
+      <!--footer start-->
+      <footer class="site-footer">
+          <div class="text-center">
+              Copyright &copy; 2018 - Binary Crate Pty Ltd
+              <a href="index.html#" class="go-top">
+                  <i class="fa fa-angle-up"></i>
+              </a>
+          </div>
+      </footer>
+      <!--footer end-->
+  </section>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/jquery-1.8.3.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="assets/js/jquery.scrollTo.min.js"></script>
+    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.sparkline.js"></script>
+
+
+    <!--common script for all pages-->
+    <script src="assets/js/common-scripts.js"></script>
+
+    <script type="text/javascript" src="assets/js/gritter/js/jquery.gritter.js"></script>
+    <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
+
+    <!--script for this page-->
+    <script src="assets/js/sparkline-chart.js"></script>
+	<script src="assets/js/zabuto_calendar.js"></script>
+
+
+
+
+  </body>
+</html>
