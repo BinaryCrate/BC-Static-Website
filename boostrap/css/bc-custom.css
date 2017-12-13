@@ -62,3 +62,16 @@ transition: color 0.3s ease;
 .crt-btn{
   align-content: flex-start;
 }
+
+.fa-dashboard, .fa-area-chart,
+.fa-table, .fa-wrench, .fa-bars{
+  color: #50e3c2;
+}
+
+.navbar-dark .navbar-brand{
+  color:#50e3c2;
+}
+
+#mainNav{
+   background-color: #f7f7f7;
+}
