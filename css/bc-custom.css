@@ -61,6 +61,8 @@ transition: color 0.3s ease;
 /* Buttons */
 .crt-btn{
   align-content: flex-start;
+  background-color: #50e3c2;
+  color:#fff;
 }
 
 .fa-dashboard, .fa-area-chart,
