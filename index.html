@@ -1,224 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Binary Crate">
-    <meta name="keyword" content="Code Learn">
 
-    <title>Binary Crate</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Binary Crate - Learn, Code, Share</title>
+  <!-- Bootstrap core CSS-->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Page level plugin CSS-->
+  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" type="text/css" rel="stylesheet">
+  <link href="css/bc-custom.css" type="text/css" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <!--external css-->
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="assets/css/zabuto_calendar.css">
-    <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
-    <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">
+</head>
 
-    <!-- Custom styles for this template -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/style-responsive.css" rel="stylesheet">
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="nav-link" id="sidenavToggler" style="padding: 0px 10px 0px 0px; color:white;">
+      <i class="fa fa-fw fa-bars"></i>
+    </a>
+    <a class="navbar-brand" href="index.html">Binary Crate</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="index.html">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="charts.html">
+            <i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">Editor</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="tables.html">
+            <i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">Classroom</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-wrench"></i>
+            <span class="nav-link-text">Settings</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseComponents">
+            <li>
+              <a href="navbar.html">Navbar</a>
+            </li>
+            <li>
+              <a href="cards.html">Cards</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <form action="#">
+                <button class="btn btn-default navbar-btn crt-btn"  data-toggle="modal" data-target="#createNew">Create New</button>
+            </form>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+        </li>
 
-    <script src="assets/js/chart-master/Chart.js"></script>
+      </ul>
+    </div>
+  </nav>
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
 
-    <!-- Code Mirror -->
-    <link rel=stylesheet href="doc/docs.css">
-    <link rel=stylesheet href=lib/codemirror.css>
-    <script src=lib/codemirror.js></script>
-    <script src=mode/xml/xml.js></script>
-    <script src=mode/javascript/javascript.js></script>
-    <script src=mode/css/css.js></script>
-    <script src=mode/htmlmixed/htmlmixed.js></script>
-    <style type=text/css>
-          .CodeMirror {
-            float: left;
-            width: 50%;
-            border: 1px solid black;
-          }
-          iframe {
-            width: 49%;
-            float: left;
-            height: 600px;
-            border: 1px solid black;
-            border-left: 0px;
-          }
-        </style>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-
-  <section id="container" >
-      <!-- **********************************************************************************************************************************************************
-      TOP BAR CONTENT & NOTIFICATIONS
-      *********************************************************************************************************************************************************** -->
-      <!--header start-->
-      <header class="header black-bg">
-              <div class="sidebar-toggle-box">
-                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+       <div class="col-md-3 col-sm-4">
+         <div class="wrimagecard wrimagecard-topimage">
+             <div class="wrimagecard-topimage_header" style="background-color: rgba(51, 105, 232, 0.1)">
+               <center><i class= "fa fa-code fa-5x" style="color:#3369e8"></i></center>
+             </div>
+             <div class="wrimagecard-topimage_title">
+               <div class="dropdown">
+                <li class="fa fa-pencil fa-lg edit" id="menu1" data-toggle="dropdown">
+                </li>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                  <li data-toggle="modal" data-target="#renameProj"><a href="#">Rename</a></li>
+                  <li data-toggle="modal" data-target="#shareProj"><a href="#">Share</a></li>
+                  <li data-toggle="modal" data-target="#deleteProj"><a href="#">Delete</a></li>
+                </ul>
               </div>
-            <!--logo start-->
-            <a href="index.html" class="logo"><b>Binary Crate</b></a>
-            <!--logo end-->
-            <div class="top-menu">
-            	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
-            	</ul>
-            </div>
-        </header>
-      <!--header end-->
+               <p>Pong Game</p>
+             </div>
+           </a>
+         </div>
+      </div>
+      </div>
+    </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>Copyright © Binary Crate 2018</small>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
 
-      <!-- **********************************************************************************************************************************************************
-      MAIN SIDEBAR MENU
-      *********************************************************************************************************************************************************** -->
-      <!--sidebar start-->
-      <aside>
-          <div id="sidebar"  class="nav-collapse ">
-              <!-- sidebar menu start-->
-              <ul class="sidebar-menu" id="nav-accordion">
-
-              	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">Maya Adams</h5>
-
-                  <li class="mt">
-                      <a class="active" href="index.html">
-                          <i class="fa fa-dashboard"></i>
-                          <span>Dashboard</span>
-                      </a>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-code"></i>
-                          <span>Editor</span>
-                      </a>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-desktop"></i>
-                          <span>Classroom</span>
-                      </a>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-comments"></i>
-                          <span>Forum</span>
-                      </a>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-cog"></i>
-                          <span>Settings</span>
-                      </a>
-                  </li>
-              </ul>
-              <!-- sidebar menu end-->
+    <!-- ***********************************************************************************************************************
+      MODALS
+    ************************************************************************************************************************* -->
+    <!-- Delete -->
+    <div class="modal fade" id="deleteProj" tabindex="-1" role="dialog" aria-labelledby="deleteLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header"></div>
+          <div class="modal-body">
+            <p class="text-center">Are you sure you want to delete <strong>Cameron Riely</strong>, this will also delete all projects and data.</p>
           </div>
-      </aside>
-      <!--sidebar end-->
-
-      <!-- **********************************************************************************************************************************************************
-      MAIN CONTENT
-      *********************************************************************************************************************************************************** -->
-      <!--main content start-->
-      <section id="main-content">
-          <section class="wrapper">
-            <div class="row">
-
-              <article>
-                  <textarea id=code name=code>
-      <!doctype html>
-      <html>
-      <head>
-      <meta charset=utf-8>
-      <title>HTML5 canvas demo</title>
-      <style>p {font-family: monospace;}</style>
-      </head>
-
-      <body>
-      <p>Canvas pane goes here:</p>
-      <canvas id=pane width=500 height=400></canvas>
-      <script>
-        var canvas = document.getElementById('pane');
-        var context = canvas.getContext('2d');
-
-        context.fillStyle = 'rgb(250,0,0)';
-        context.fillRect(10, 10, 55, 50);
-
-        context.fillStyle = 'rgba(0, 0, 250, 0.5)';
-        context.fillRect(30, 30, 55, 50);
-        </script>
-       </body>
-        </html>
-            </textarea>
-                  <iframe id=preview></iframe>
-                  <script>
-                    var delay;
-                    // Initialize CodeMirror editor with a nice html5 canvas demo.
-                    var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
-                      mode: 'text/html'
-                    });
-                    editor.on("change", function() {
-                      clearTimeout(delay);
-                      delay = setTimeout(updatePreview, 300);
-                    });
-
-                    function updatePreview() {
-                      var previewFrame = document.getElementById('preview');
-                      var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
-                      preview.open();
-                      preview.write(editor.getValue());
-                      preview.close();
-                    }
-                    setTimeout(updatePreview, 300);
-                  </script>
-                </article>
-
-          </section>
-      </section>
-
-
-      <!--main content end-->
-      <!--footer start-->
-      <footer class="site-footer">
-          <div class="text-center">
-              Copyright &copy; 2018 - Binary Crate Pty Ltd
-              <a href="index.html#" class="go-top">
-                  <i class="fa fa-angle-up"></i>
-              </a>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Delete</button>
           </div>
-      </footer>
-      <!--footer end-->
-  </section>
-
-    <!-- js placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/jquery-1.8.3.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="assets/js/jquery.scrollTo.min.js"></script>
-    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-    <script src="assets/js/jquery.sparkline.js"></script>
+        </div>
+      </div>
+    </div>
 
 
-    <!--common script for all pages-->
-    <script src="assets/js/common-scripts.js"></script>
+    <!-- Rename Modal -->
+    <div class="modal fade" id="renameProj" tabindex="-1" role="dialog" aria-labelledby="renameProjLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="renameProjLabel">Rename Project</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label class="col-form-label" for="formGroupExampleInput">Title</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Pong Game">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Description</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="A really awesome pong game" rows="3"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <script type="text/javascript" src="assets/js/gritter/js/jquery.gritter.js"></script>
-    <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
+    <!-- Share Modal -->
+    <div class="modal fade" id="shareProj" tabindex="-1" role="dialog" aria-labelledby="shareProjLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Share Project</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label class="col-form-label" for="formGroupExampleInput">Share Link</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="http://bc.com/o82Ssdms/">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Share On: </label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <!--script for this page-->
-    <script src="assets/js/sparkline-chart.js"></script>
-	<script src="assets/js/zabuto_calendar.js"></script>
+    <!-- Create New Modal -->
+    <div class="modal fade" id="createNew" tabindex="-1" role="dialog" aria-labelledby="createNewLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create New</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label class="col-form-label" for="formGroupExampleInput">Title</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Title of project">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Description</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Description of project" rows="3"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Python</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  </body>
+
+    <!-- Create New App Modal -->
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.min.js"></script>
+    <!-- Custom scripts for this page-->
+    <script src="js/sb-admin-datatables.min.js"></script>
+    <script src="js/sb-admin-charts.min.js"></script>
+  </div>
+</body>
+
 </html>
