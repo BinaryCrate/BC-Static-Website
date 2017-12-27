@@ -77,3 +77,21 @@ transition: color 0.3s ease;
 #mainNav{
    background-color: #f7f7f7;
 }
+
+
+
+/* Code Mirror Customs */
+
+.CodeMirror {
+  float: left;
+  height: 680px;
+  width: 50%;
+  border: 1px solid black;
+}
+iframe {
+  width: 50%;
+  float: left;
+  height: auto;
+  border: 1px solid black;
+  border-left: 0px;
+}
