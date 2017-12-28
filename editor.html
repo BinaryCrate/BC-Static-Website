@@ -26,7 +26,7 @@
   <script src=mode/javascript/javascript.js></script>
   <script src=mode/css/css.js></script>
   <script src=mode/htmlmixed/htmlmixed.js></script>
-  <!-- <script src=mode/python/python.js></script> -->
+  <script src=mode/python/python.js></script>
 
 </head>
 
@@ -210,8 +210,8 @@
       var delay;
       var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
         lineNumbers: true,
-        mode: 'text/html',
-        //mode: 'python',
+        //mode: 'text/html',
+        mode: 'python',
         viewportMargin: Infinity
       });
 
