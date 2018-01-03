@@ -30,9 +30,16 @@ transition: all 0.3s ease;
 position: relative;
 }
 
+/* Pencil dropdown menu */
+
+.show{
+  padding: 7px;
+}
+
 .edit{
   float: right;
 }
+
 
 .wrimagecard-topimage_header{
 padding: 20px;
