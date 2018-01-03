@@ -91,7 +91,7 @@ transition: color 0.3s ease;
 
 .CodeMirror {
   float: left;
-  height: 680px;
+  height: 600px;
   width: 50%;
   border: 1px solid black;
 }
@@ -102,3 +102,5 @@ iframe {
   border: 1px solid black;
   border-left: 0px;
 }
+
+

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Binary Crate - Learn, Code, Share</title>
+  <!-- Bootstrap core CSS-->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Page level plugin CSS-->
+  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" type="text/css" rel="stylesheet">
+  <link href="css/bc-custom.css" type="text/css" rel="stylesheet">
+  <!-- Code Mirror CSS -->
+  <link rel=stylesheet href="doc/docs.css">
+  <link rel=stylesheet href=lib/codemirror.css>
+  <link rel="stylesheet" href="css/bc-custom.css">
+  <script src=lib/codemirror.js></script>
+  <script src=mode/xml/xml.js></script>
+  <script src=mode/javascript/javascript.js></script>
+  <script src=mode/css/css.js></script>
+  <script src=mode/htmlmixed/htmlmixed.js></script>
+  <script src=mode/python/python.js></script>
+
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="nav-link" id="sidenavToggler" style="padding: 0px 10px 0px 0px; color:white;">
+      <i class="fa fa-fw fa-bars"></i>
+    </a>
+    <a class="navbar-brand" href="index.html">Binary Crate</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="index.html">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="editor.html">
+            <i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">Editor</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="classroom.html">
+            <i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">Classroom</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-wrench"></i>
+            <span class="nav-link-text">Settings</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseComponents">
+            <li>
+              <a href="navbar.html">Navbar</a>
+            </li>
+            <li>
+              <a href="cards.html">Cards</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto" >
+        <li class="nav-item">
+          <button class="btn btn-default navbar-btn crt-btn"  data-toggle="modal" data-target="#shareProj">Share</button>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+  <div class="content-wrapper" style="padding-top:1px">
+    <div class="container-fluid" style="padding-left: 1px;">
+
+
+        <article>
+
+            <textarea id=code name=code>
+<!doctype html>
+<html>
+  <head>
+    <meta charset=utf-8>
+    <title>HTML5 Demo</title>
+    <style>p {font-family: monospace;}</style>
+  </head>
+  <body>
+    <p>Canvas pane goes here:</p>
+    <canvas id=pane width=300 height=200></canvas>
+    <script>
+      var canvas = document.getElementById('pane');
+      var context = canvas.getContext('2d');
+
+      context.fillStyle = 'rgb(250,0,0)';
+      context.fillRect(10, 10, 55, 50);
+
+      context.fillStyle = 'rgba(0, 0, 250, 0.5)';
+      context.fillRect(30, 30, 55, 50);
+    </script>
+  </body>
+</html></textarea>
+            <iframe id=preview></iframe>
+          </article>
+
+
+
+      </div>
+    </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>Copyright © Binary Crate 2018</small>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div class="modal fade" id="shareProj" tabindex="-1" role="dialog" aria-labelledby="shareProjLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Share Project</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label class="col-form-label" for="formGroupExampleInput">Share Link</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="http://bc.com/o82Ssdms/">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Share On: </label>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>s
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.min.js"></script>
+    <!-- Custom scripts for this page-->
+    <script src="js/sb-admin-datatables.min.js"></script>
+    <script src="js/sb-admin-charts.min.js"></script>
+
+    <script>
+      var delay;
+      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        lineNumbers: true,
+        //mode: 'text/html',
+        mode: 'python',
+        viewportMargin: Infinity
+      });
+
+      editor.on("change", function() {
+        clearTimeout(delay);
+        delay = setTimeout(updatePreview, 300);
+      });
+
+      function updatePreview() {
+        var previewFrame = document.getElementById('preview');
+        var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
+        preview.open();
+        preview.write(editor.getValue());
+        preview.close();
+      }
+      setTimeout(updatePreview, 300);
+    </script>
+
+
+  </div>
+</body>
+
+</html>
