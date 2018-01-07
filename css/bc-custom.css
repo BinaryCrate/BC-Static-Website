@@ -6,7 +6,7 @@ Date Last Updated:
 
 /*
 * Table of Cotents
-*
+* Nav
 * Cards
 * Buttons
 *
@@ -14,6 +14,11 @@ Date Last Updated:
 *
 */
 
+/* Navigation */
+
+.share-btn {
+  padding-right: 25px;
+}
 /* Dashbaord Cards*/
 
 .wrimagecard{
@@ -90,7 +95,7 @@ transition: color 0.3s ease;
 .CodeMirror {
   float: left;
   height: 600px;
-  width: 40%;
+  width: 50%;
   border: 1px solid black;
 }
 iframe {
@@ -131,37 +136,64 @@ article{
   margin: 0 auto;
 }
 
-ul.tree, ul.tree ul {
-    list-style: none;
-     margin: 0;
-     padding: 0;
-   }
-   ul.tree ul {
-     margin-left: 10px;
-   }
-   ul.tree li {
-     margin: 0;
-     padding: 0 7px;
-     line-height: 20px;
-     color: #369;
-     font-weight: bold;
-     border-left:1px solid rgb(100,100,100);
+input {
+  font-size: 1em;
+}
+ol.tree {
+  padding-left: 0;
+}
+.tree li {
+  list-style-type: none;
+  color: #fff;
+  position: relative;
+  margin-left: -15px;
+}
 
-   }
-   ul.tree li:last-child {
-       border-left:none;
-   }
-   ul.tree li:before {
-      position:relative;
-      top:-0.3em;
-      height:1em;
-      width:12px;
-      color:white;
-      border-bottom:1px solid rgb(100,100,100);
-      content:"";
-      display:inline-block;
-      left:-7px;
-   }
-   ul.tree li:last-child:before {
-      border-left:1px solid rgb(100,100,100);
-   }
+
+li label {
+  color: black;
+  padding-left: 37px;
+  cursor: pointer;
+  background: url("https://www.thecssninja.com/demo/css_tree/folder-horizontal.png")
+    no-repeat 15px 2px;
+  display: block;
+}
+li input {
+  color; black;
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  left: -0.5em;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+li input + ol > li {
+  display: none;
+  margin-left: -14px !important;
+  padding-left: 1px;
+}
+li.file {
+  margin-left: -1px !important;
+}
+li.file a {
+  display: inline-block;
+  padding-left: 21px;
+  color: #000;
+  text-decoration: none;
+  background: url("https://www.thecssninja.com/demo/css_tree/document.png")
+    no-repeat 0 0;
+}
+li input:checked + ol {
+  height: auto;
+  margin: -21px 0 0 -44px;
+  padding: 25px 0 0 80px;
+}
+li input:checked + ol > li {
+  display: block;
+  margin: 0 0 0.063em;
+}
+li input:checked + ol > li:first-child {
+  margin: 0 0 0.125em;
+}
