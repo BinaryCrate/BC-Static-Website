@@ -20,6 +20,10 @@ Date Last Updated:
 .share-btn {
   padding-right: 25px;
 }
+
+ .shapes__dropdown{
+  padding-right: 20px;  
+ }
 /* Dashbaord Cards*/
 
 .wrimagecard{
@@ -38,7 +42,7 @@ position: relative;
 
 /* Pencil dropdown menu */
 
-.show{
+.dropdown_menu.show{
   padding: 7px;
 }
 
