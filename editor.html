@@ -30,11 +30,11 @@
 
 </head>
 
-<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+<body class="fixed-nav sticky-footer" >
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <a class="nav-link" id="sidenavToggler" style="padding: 0px 10px 0px 0px; color:white;">
-      <i class="fa fa-fw fa-bars"></i>
+      <i class="fa fa-fw fa-bars side-nav"></i>
     </a>
     <a class="navbar-brand" href="index.html">Binary Crate</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,7 +61,7 @@
           </a>
         </li>
         <li class="nav-item" >
-          <a class="nav-link nav-link-collapse collapsed">
+          <a class="nav-link" href="settings.html">
             <i class="fa fa-fw fa-wrench"></i>
             <span class="nav-link-text">Settings</span>
           </a>
@@ -71,45 +71,14 @@
       <ul class="navbar-nav ml-auto">
           <div class="dropdown nav-item shapes__dropdown">
             <button class="btn dropdown-toggle crt-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              File
+              Dropdown
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <a class="dropdown-item" href="#"><i class="fa fa-1x fa-caret-up" aria-hidden="true"></i>
 Triangle</a>
               <a class="dropdown-item" href="#"><i class="fa fa-1x fa-square" aria-hidden="true"></i>
 Square</a>
-              <a class="dropdown-item" href="#"><i class="fa fa-1x fa-btc" aria-hidden="true"></i>
-Something else here</a>
-              <a class="dropdown-item dropdown-item-collapse" href="#recentdocs"><i class="fa fa-1x fa-caret-up" aria-hidden="true"></i>Recent Documents
-                <ul class="dropdown-second-level collapse" id="recentdocs">
-                  <li><a href='#'>hello_world.py</a></li>
-                </ul>
-              </a>
-            </div>
-          </div>
-          <div class="dropdown nav-item shapes__dropdown">
-            <button class="btn dropdown-toggle crt-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Edit
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#"><i class="fa fa-1x fa-caret-up" aria-hidden="true"></i>
-Triangle</a>
-              <a class="dropdown-item" href="#"><i class="fa fa-1x fa-square" aria-hidden="true"></i>
-Square</a>
-              <a class="dropdown-item" href="#"><i class="fa fa-1x fa-btc" aria-hidden="true"></i>
-Something else here</a>
-            </div>
-          </div>
-          <div class="dropdown nav-item shapes__dropdown">
-            <button class="btn dropdown-toggle crt-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Options
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#"><i class="fa fa-1x fa-caret-up" aria-hidden="true"></i>
-Triangle</a>
-              <a class="dropdown-item" href="#"><i class="fa fa-1x fa-square" aria-hidden="true"></i>
-Square</a>
-              <a class="dropdown-item" href="#"><i class="fa fa-1x fa-btc" aria-hidden="true"></i>
+              <a class="dropdown-item" href="#"><i class="fa fa-1z fa-btc" aria-hidden="true"></i>
 Something else here</a>
             </div>
           </div>
@@ -124,9 +93,9 @@ Something else here</a>
     </div>
   </nav>
   <div class="content-wrapper" style="padding-top:1px">
-    <div class="container-fluid" style="padding-left: 1px;">
+    <div class="container-fluid" style="padding-left: 1px; padding-top:1px">
       <div class="row">
-      <div class="project-fnf">
+      <div class="project-fnf col-ms-2">
         <div class="top-tree">
           <span class="fa fa-1x fa-file-code-o"></span>
           <span class="fa fa-1x fa-folder-o"></span>
@@ -288,8 +257,8 @@ Something else here</a>
 
         </ol>
       </div>
-        <article>
-            <textarea id=code name=code>
+        <article id="editor" class="col-md-10 row">
+            <textarea id=code name=code class="col-5 col-md-5 ">
 <!doctype html>
 <html>
   <head>
@@ -311,8 +280,14 @@ Something else here</a>
       context.fillRect(30, 30, 55, 50);
     </script>
   </body>
-</html></textarea>
-            <iframe id=preview></iframe>
+</html>
+</textarea>
+<div class="row col-md-5">
+  <iframe id=preview class=" col-12"></iframe>
+  <div id="console" class=" col-5 col-md-5">
+    <div class="logMessage">request sent</div>
+  </div>
+</div>
           </article>
           </div>
 
@@ -327,10 +302,7 @@ Something else here</a>
         </div>
       </div>
     </footer>
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fa fa-angle-up"></i>
-    </a>
+
 
     <!-- Logout Modal-->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -381,7 +353,7 @@ Something else here</a>
           </div>
         </div>
       </div>
-    </div>s
+    </div>
 
 
     <!-- Bootstrap core JavaScript-->
