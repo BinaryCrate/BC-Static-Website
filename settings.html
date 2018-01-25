@@ -82,7 +82,7 @@
                             <a class="nav-link active" id="pills-personal-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">My Details</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-payments" role="tab" aria-controls="pills-profile" aria-selected="false">Payments</a>
+                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-payments" role="tab" aria-controls="pills-profile" aria-selected="false">Billing</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="pills-advanced-tab" data-toggle="pill" href="#pills-advanced" role="tab" aria-controls="pills-contact" aria-selected="false">Advanced Settings</a>
@@ -96,6 +96,15 @@
                   <!-- personal tab pane  -->
                     <div class="tab-pane fade show active col-md-12" id="pills-home" role="tabpanel" aria-labelledby="pills-personal-tab">
                         <form>
+                          <div class="form-row">
+                            <div class="col-sm-6">
+                              <div class="text-center">
+                                <img src="http://lorempixel.com/200/200/people/9/" class="avatar img-circle img-thumbnail" alt="avatar">
+                                <h6>Upload a different photo...</h6>
+                                <input type="file" class="text-center center-block well well-sm">
+                              </div>
+                            </div>
+                          </div>
                           <div class="form-row">
                               <div class="form-group col-md-6">
                                   <label for="inputFirstName">First Name</label>
@@ -112,15 +121,15 @@
                           </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="inputEmail4">Password</label>
-                                    <input type="email" class="form-control" id="inputEmail4" placeholder="********">
+                                    <label for="inputPassword6">Password</label>
+                                    <input type="password" class="form-control" id="inputPassword6" placeholder="********">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="inputPassword4">Retype Password</label>
-                                    <input type="password" class="form-control" id="inputPassword4" placeholder="Retype Password" disabled>
+                                    <label for="inputPassword6">Retype Password</label>
+                                    <input type="password" class="form-control" id="inputPassword6" placeholder="Retype Password" disabled>
                                 </div>
                             </div>
-                            <h4>Billing Address</h4>
+                            <h4>Address</h4>
                             <hr>
                             <div class="form-group">
                                 <label for="username">Address</label>
@@ -151,16 +160,76 @@
                         </form>
                     </div>
 
-                    <!-- Payment Detail  -->
+                    <!-- Payment Detail Tab -->
                     <div class="tab-pane fade col-md-12" id="pills-payments" role="tabpanel" aria-labelledby="pills-payments-tab">
                       <form>
                         <div class="form-group">
+                          <h4>Payment Details</h4>
+                          <hr>
                             <label class="control-label">Card Holder's Name</label>
                             <input type="text" class="form-control" placeholder=""="Fill your first and last name">
                         </div>
-
-
-
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputCity">Card Number</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="inputExpiry">Year</label>
+                                <select id="inputExpiry" class="form-control">
+                                <option selected>JAN</option>
+                                <option>2018</option>
+                                <option>2019</option>
+                                <option>2020</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="inputExpiry">Month</label>
+                                <select id="inputExpiry" class="form-control">
+                                <option selected>JAN</option>
+                                <option>FEB</option>
+                                <option>MAR</option>
+                                <option>APR</option>
+                                <option>MAY</option>
+                                <option>JUN</option>
+                                <option>JUL</option>
+                                <option>AUG</option>
+                                <option>SEPT</option>
+                                <option>NOV</option>
+                                <option>DEC</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="inputZip">CVC</label>
+                                <input type="text" class="form-control" id="inputZip">
+                            </div>
+                        </div>
+                        <h4>Billing Address</h4>
+                        <hr>
+                        <div class="form-group">
+                            <label for="username">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputCity">City</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputState">State</label>
+                                <select id="inputState" class="form-control">
+                                <option selected>WA</option>
+                                <option>QLD</option>
+                                <option>NSW</option>
+                                <option>TAS</option>
+                                <option>NT</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="inputZip">Post Code</label>
+                                <input type="text" class="form-control" id="inputZip">
+                            </div>
+                        </div>
                         <div class="form-group">
                           <button type="submit" class="btn btn-primary">Save</button>
                           <button type="cancel" class="btn ">Cancel</button>
@@ -169,7 +238,21 @@
                       </form>
 
                     </div>
+
+                    <!-- Advanced Settings Tab -->
                     <div class="tab-pane fade col-md-12" id="pills-advanced" role="tabpanel" aria-labelledby="pills-advanced-tab">
+                      <form>
+                        <div class="form-group">
+                            <label class="control-label">School Code</label>
+                            <input type="text" class="form-control" placeholder=""="Fill your first and last name">
+                        </div>
+
+                        <div class="form-group">
+                          <button type="submit" class="btn btn-primary">Save</button>
+                          <button type="cancel" class="btn ">Cancel</button>
+                        </div>
+
+                      </form>
 
                     </div>
                 </div>
