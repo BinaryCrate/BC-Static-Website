@@ -92,11 +92,12 @@ Something else here</a>
             </ul>
         </div>
     </nav>
-    <div class="content-wrapper" style="padding-top:1px">
-        <div class="container-fluid" style="padding-left: 1px; padding-top:1px">
-            <div class="row first-row">
+    <div class="content-wrapper " style="padding-top:1px">
+        <div class="container-fluid code-area" style="padding-left: 1px; padding-top:1px height:100%;">
+            <div class="row row-wrapper">
                 <div class="project-fnf col-ms-2">
                     <div class="top-tree">
+                      <p style="display:inline;">Files</p>
                         <span class="fa fa-1x fa-file-code-o"></span>
                         <span class="fa fa-1x fa-folder-o"></span>
                     </div>
@@ -257,8 +258,8 @@ Something else here</a>
 
                     </ol>
                 </div>
-                <article id="editor" class="col-md-10 row second-row">
-                    <textarea id=code name=code class="col-5 col-md-5 ">
+                <article id="editor" class="col-md-12 row">
+                    <textarea id=code name=code class="col-md-5 CodeMirror ">
 <!doctype html>
 <html>
   <head>
@@ -284,8 +285,8 @@ Something else here</a>
 </textarea>
                     <div class="row col-md-5">
                         <iframe id=preview class=" col-12"></iframe>
-                        <div id="console" class=" col-5 col-md-5">
-                            <div class="logMessage">request sent</div>
+                        <div id="console" class="console-editor col-12">
+                            <div class="logMessage"><span>//: </span>request sent</div>
                         </div>
                     </div>
                 </article>
