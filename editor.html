@@ -27,6 +27,16 @@
     <script src=mode/css/css.js></script>
     <script src=mode/htmlmixed/htmlmixed.js></script>
     <script src=mode/python/python.js></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#resizable" ).resizable();
+  } );
+  </script>
+
 
 </head>
 
@@ -259,7 +269,7 @@ Something else here</a>
                     </ol>
                 </div>
                 <article id="editor" class="col-md-12 row">
-                    <textarea id=code name=code class="col-md-5 CodeMirror ">
+                    <textarea id="code" name=code class="col-md-5 CodeMirror ">
 <!doctype html>
 <html>
   <head>
@@ -283,8 +293,9 @@ Something else here</a>
   </body>
 </html>
 </textarea>
+
                     <div class="row col-md-5">
-                        <iframe id=preview class=" col-12"></iframe>
+                        <iframe id="preview" class="col-12"></iframe>
                         <div id="console" class="console-editor col-12">
                             <div class="logMessage"><span>//: </span>request sent</div>
                         </div>

@@ -105,6 +105,7 @@ ____________________________________________________________________________*/
     color: #fff;
 }
 
+
 .fa-dashboard,
 .fa-code,
 .fa-laptop,
@@ -126,25 +127,19 @@ ____________________________________________________________________________*/
 
 .CodeMirror {
     float: left;
-    height: 600px;
+    height:650px;
     width: 50%;
+    padding: 0px;
     border: 1px solid black;
 }
 
 iframe {
-    width:50%;
+    width:auto;
     float: left;
-    height: 400px;
+    min-height: 100%;
+    width: 50%;
     border: 1px solid black;
     border-left: 0px;
-}
-
-article{
-  padding-right: 10px;
-}
-#preview {
-    padding: 0px;
-    width: 60%;
 }
 
 .code-area{
@@ -511,6 +506,30 @@ ____________________________________________________________________________ */
 }
 
 
+/* Share Page
+____________________________________________________________________________ */
+
+.projectMeta{
+  color: #fff;
+  display: flex;
+}
+
+.projectName{
+  padding-right: 10px;
+}
+
+.projectName >h2,p {
+  margin: 0;
+}
+
+.projectTitle{
+  font-size: 2em;
+}
+
+.projectAuth{
+  font-size: 1em;
+  align-self: flex-end;
+}
 
 
 /* Settings
