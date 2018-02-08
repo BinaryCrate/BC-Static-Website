@@ -140,7 +140,7 @@ ____________________________________________________________________________*/
 }
 
 iframe {
-    width:auto;
+    width: auto;
     float: left;
     min-height: 100%;
     width: 50%;
@@ -148,10 +148,38 @@ iframe {
     border-left: 0px;
 }
 
+.code-output{
+  flex:3;
+}
 .code-area{
   max-width: 1250px;
 }
 
+.output-col{
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+
+/* Console
+____________________________________________________________________________ */
+
+#console {
+    height: 200px;
+    border: 1px black;
+    font-family: monospace;
+}
+
+.console-editor{
+  background: #000;
+  color: #fff;
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  align-self: end;
+  flex:1;
+
+}
 
 /* Project Files and Folders
 ____________________________________________________________________________*/
@@ -499,22 +527,7 @@ ____________________________________________________________________________*/
     margin-left: 15px;
 }
 
-/* Console
-____________________________________________________________________________ */
 
-#console {
-    height: 200px;
-    border: 1px black;
-    font-family: monospace;
-}
-
-.console-editor{
-  background: #000;
-  color: #fff;
-  width: 100%;
-  padding-left: 5px;
-  padding-right: 5px;
-}
 
 
 /* Share Page
