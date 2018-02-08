@@ -54,13 +54,7 @@
           </a>
                 </li>
             </ul>
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <form action="#">
-                        <a class="btn btn-default navbar-btn crt-btn" href="#" data-toggle="modal" data-target="#createNew">Create New</a>
-                    </form>
-                </li>
-            </ul>
+
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
@@ -75,6 +69,22 @@
       <div class="row">
   		<div class="col-md-2 bg-white studentList">
               <!-- =============================================================== -->
+              <div class="studentHeader">
+                  <button class="btn crt-btn studentSearch" data-toggle="collapse" href="#SearchCollapse" role="button" aria-expanded="false" aria-controls="SearchCollapse">
+                    <li class="fa fa-search"></li>
+                  </button>
+                  <button class="btn crt-btn studentAdd col-md-5" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <li class="fa fa-plus"></li>
+                  </button>
+                <div class="collapse" id="SearchCollapse"><!-- search -->
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search for...">
+                      <span class="input-group-btn">
+                        <button class="btn btn-search" type="button">Go!</button>
+                      </span>
+                    </div><!-- /input-group -->
+                </div>
+              </div>
               <!-- Studnet list -->
               <ul class="student-list">
                   <li class="StudentCard">
@@ -83,7 +93,7 @@
                   		<div class="friend-name">
                   			<strong>John Doe</strong>
                   		</div>
-                  		<small class="chat-alert label label-danger"><i class="fa fa-pencil-alt"></i></small>
+                  		<small class="chat-alert "><i class="fa fa-2x fa-ellipsis-v"></i></small>
                   	</a>
                   </li>
                   <li class="StudentCard">
@@ -92,41 +102,32 @@
                   		<div class="friend-name">
                   			<strong>Jane Doe</strong>
                   		</div>
-                  		<div class="last-message text-muted">Year 9.</div>
-                  	<small class="chat-alert text-muted"><i class="fa fa-pen"></i></small>
+                  		<div class="last-message text-muted">Year 9</div>
+                  	<small class="chat-alert text-muted"><i class="fa fa-2x fa-ellipsis-v"></i></small>
                   	</a>
                   </li>
                   <li class="StudentCard">
                   	<a href="#" class="clearfix">
                   		<img src="https://bootdey.com/img/Content/user_3.jpg" alt="" class="img-circle">
-                  		<div class="friend-name">
-                  			<strong>Kate</strong>
-                  		</div>
-                  		<div class="last-message text-muted">Lorem ipsum dolor sit amet.</div>
-                  		<small class="time text-muted">Yesterday</small>
-                  		<small class="chat-alert text-muted"><i class="fa fa-reply"></i></small>
+                  		<div class="friend-name"><strong>Kate</strong></div>
+                  		<div class="last-message text-muted">Year 9</div>
+                  		<small class="chat-alert text-muted"><i class="fa fa-2x fa-ellipsis-v"></i></small>
                   	</a>
                   </li>
                   <li class="StudentCard">
                   	<a href="#" class="clearfix">
                   		<img src="https://bootdey.com/img/Content/user_1.jpg" alt="" class="img-circle">
-                  		<div class="friend-name">
-                  			<strong>Kate</strong>
-                  		</div>
-                  		<div class="last-message text-muted">Lorem ipsum dolor sit amet.</div>
-                  		<small class="time text-muted">Yesterday</small>
-                  		<small class="chat-alert text-muted"><i class="fa fa-reply"></i></small>
+                  		<div class="friend-name studentName"><p>Kate</p></div>
+                  		<div class="last-message text-muted">Year 9</div>
+                  		<small class="chat-alert text-muted"><i class="fa fa-2x fa-ellipsis-v"></i></small>
                   	</a>
                   </li>
                   <li class="StudentCard active">
                   	<a href="#" class="clearfix">
                   		<img src="https://bootdey.com/img/Content/user_2.jpg" alt="" class="img-circle">
-                  		<div class="friend-name">
-                  			<strong>Kate</strong>
-                  		</div>
-                  		<div class="last-message text-muted">Lorem ipsum dolor sit amet.</div>
-                  		<small class="time text-muted">Yesterday</small>
-                  		<small class="chat-alert text-muted"><i class="fa fa-reply"></i></small>
+                  		<div class="friend-name studentName"><small>Kate</small></div>
+                  		<div class="last-message text-muted">Year 9</div>
+                  		<small class="chat-alert text-muted"><i class="fa fa-2x fa-ellipsis-v"></i></small>
                   	</a>
                   </li>
                   <li class="StudentCard">
@@ -135,9 +136,9 @@
                   		<div class="friend-name">
                   			<strong>Kate</strong>
                   		</div>
-                  		<div class="last-message text-muted">Lorem ipsum dolor sit amet.</div>
-                  		<small class="time text-muted">Yesterday</small>
-                  		<small class="chat-alert text-muted"><i class="fa fa-reply"></i></small>
+                  		<div class="last-message text-muted">Year 9</div>
+
+                  		<small class="chat-alert text-muted"><i class="fa fa-2x fa-ellipsis-v"></i></small>
                   	</a>
                   </li>
                   <li class="StudentCard">
@@ -146,9 +147,8 @@
                   		<div class="friend-name">
                   			<strong>Kate</strong>
                   		</div>
-                  		<div class="last-message text-muted">Lorem ipsum dolor sit amet.</div>
-                  		<small class="time text-muted">Yesterday</small>
-                  		<small class="chat-alert text-muted"><i class="fa fa-reply"></i></small>
+                  		<div class="last-message text-muted">Year 9</div>
+                  		<small class="chat-alert text-muted"><i class="fa fa-2x fa-ellipsis-v"></i></small>
                   	</a>
                   </li>
                   <li class="StudentCard">
@@ -157,13 +157,147 @@
                   		<div class="friend-name">
                   			<strong>Jane Doe</strong>
                   		</div>
-                  		<div class="last-message text-muted">Lorem ipsum dolor sit amet.</div>
-                  		<small class="time text-muted">5 mins ago</small>
-                  	<small class="chat-alert text-muted"><i class="fa fa-check"></i></small>
+                  		<div class="last-message text-muted">Year 9</div>
+                  	<small class="chat-alert text-muted"><i class="fa fa-2x fa-ellipsis-v"></i></small>
                   	</a>
                   </li>
               </ul>
   		</div>
+
+      <div class="col-md-10">
+        <div class="row">
+          <!-- Project 1 -->
+          <div class="col-md-3 col-sm-4">
+              <div class="wrimagecard wrimagecard-topimage">
+                  <div class="wrimagecard-topimage_header" style="background-color: rgba(51, 105, 232, 0.1)">
+                      <a href="editor.html">
+                          <center><i class="fa fa-code fa-5x" style="color:#3369e8"></i></center>
+                      </a>
+                  </div>
+                  <div class="wrimagecard-topimage_title">
+                      <div class="dropdown">
+                          <li class="fa fa-pencil fa-lg edit" id="menu1" data-toggle="dropdown">
+                          </li>
+                          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li><a href="#" data-toggle="modal" data-target="#renameProj">Rename</a></li>
+                              <li><a href="#" data-toggle="modal" data-target="#shareProj">Share</a></li>
+                              <li><a href="#" data-toggle="modal" data-target="#deleteProj">Delete</a></li>
+                          </ul>
+                      </div>
+                      <a href="editor.html">
+                          <p>Pong Game</p>
+                      </a>
+                  </div>
+                  </a>
+              </div>
+          </div><!-- Project end -->
+
+          <!-- Project 1 -->
+          <div class="col-md-3 col-sm-4">
+              <div class="wrimagecard wrimagecard-topimage">
+                  <div class="wrimagecard-topimage_header" style="background-color: rgba(51, 105, 232, 0.1)">
+                      <a href="editor.html">
+                          <center><i class="fa fa-code fa-5x" style="color:#3369e8"></i></center>
+                      </a>
+                  </div>
+                  <div class="wrimagecard-topimage_title">
+                      <div class="dropdown">
+                          <li class="fa fa-pencil fa-lg edit" id="menu1" data-toggle="dropdown">
+                          </li>
+                          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li><a href="#" data-toggle="modal" data-target="#renameProj">Rename</a></li>
+                              <li><a href="#" data-toggle="modal" data-target="#shareProj">Share</a></li>
+                              <li><a href="#" data-toggle="modal" data-target="#deleteProj">Delete</a></li>
+                          </ul>
+                      </div>
+                      <a href="editor.html">
+                          <p>Pong Game</p>
+                      </a>
+                  </div>
+                  </a>
+              </div>
+          </div><!-- Project end -->
+
+          <!-- Project 1 -->
+          <div class="col-md-3 col-sm-4">
+              <div class="wrimagecard wrimagecard-topimage">
+                  <div class="wrimagecard-topimage_header" style="background-color: rgba(51, 105, 232, 0.1)">
+                      <a href="editor.html">
+                          <center><i class="fa fa-code fa-5x" style="color:#3369e8"></i></center>
+                      </a>
+                  </div>
+                  <div class="wrimagecard-topimage_title">
+                      <div class="dropdown">
+                          <li class="fa fa-pencil fa-lg edit" id="menu1" data-toggle="dropdown">
+                          </li>
+                          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li><a href="#" data-toggle="modal" data-target="#renameProj">Rename</a></li>
+                              <li><a href="#" data-toggle="modal" data-target="#shareProj">Share</a></li>
+                              <li><a href="#" data-toggle="modal" data-target="#deleteProj">Delete</a></li>
+                          </ul>
+                      </div>
+                      <a href="editor.html">
+                          <p>Pong Game</p>
+                      </a>
+                  </div>
+                  </a>
+              </div>
+          </div><!-- Project end -->
+
+          <!-- Project 1 -->
+          <div class="col-md-3 col-sm-4">
+              <div class="wrimagecard wrimagecard-topimage">
+                  <div class="wrimagecard-topimage_header" style="background-color: rgba(51, 105, 232, 0.1)">
+                      <a href="editor.html">
+                          <center><i class="fa fa-code fa-5x" style="color:#3369e8"></i></center>
+                      </a>
+                  </div>
+                  <div class="wrimagecard-topimage_title">
+                      <div class="dropdown">
+                          <li class="fa fa-pencil fa-lg edit" id="menu1" data-toggle="dropdown">
+                          </li>
+                          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li><a href="#" data-toggle="modal" data-target="#renameProj">Rename</a></li>
+                              <li><a href="#" data-toggle="modal" data-target="#shareProj">Share</a></li>
+                              <li><a href="#" data-toggle="modal" data-target="#deleteProj">Delete</a></li>
+                          </ul>
+                      </div>
+                      <a href="editor.html">
+                          <p>Pong Game</p>
+                      </a>
+                  </div>
+                  </a>
+              </div>
+          </div><!-- Project end -->
+
+          <!-- Project 1 -->
+          <div class="col-md-3 col-sm-4">
+              <div class="wrimagecard wrimagecard-topimage">
+                  <div class="wrimagecard-topimage_header" style="background-color: rgba(51, 105, 232, 0.1)">
+                      <a href="editor.html">
+                          <center><i class="fa fa-code fa-5x" style="color:#3369e8"></i></center>
+                      </a>
+                  </div>
+                  <div class="wrimagecard-topimage_title">
+                      <div class="dropdown">
+                          <li class="fa fa-pencil fa-lg edit" id="menu1" data-toggle="dropdown">
+                          </li>
+                          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li><a href="#" data-toggle="modal" data-target="#renameProj">Rename</a></li>
+                              <li><a href="#" data-toggle="modal" data-target="#shareProj">Share</a></li>
+                              <li><a href="#" data-toggle="modal" data-target="#deleteProj">Delete</a></li>
+                          </ul>
+                      </div>
+                      <a href="editor.html">
+                          <p>Pong Game</p>
+                      </a>
+                  </div>
+                  </a>
+              </div>
+          </div><!-- Project end -->
+
+        </div>
+      </div>
   	</div>
 
 
@@ -179,10 +313,7 @@
                 </div>
             </div>
         </footer>
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fa fa-angle-up"></i>
-    </a>
+
 
         <!-- ***********************************************************************************************************************
       MODALS
