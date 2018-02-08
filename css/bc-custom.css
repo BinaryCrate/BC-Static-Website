@@ -257,7 +257,12 @@ li input:checked + ol > li:first-child {
 }
 
 
-/* Code Area */
+.file-active{
+  background-color: #f1f5fc;;
+}
+
+/* Code Area
+____________________________________________________________________________ */
 
 .container{
   padding: 0px;
@@ -554,7 +559,6 @@ ____________________________________________________________________________ */
 ____________________________________________________________________________*/
 
 
-
 .student-list {
   list-style: none;
   padding: 0px;
@@ -594,11 +598,6 @@ ____________________________________________________________________________*/
 
 .student-list li.active a {
   background-color: #f1f5fc;
-}
-
-
-.active{
-  background-color: #f1f5fc;;
 }
 
 .student-list li a .friend-name,
