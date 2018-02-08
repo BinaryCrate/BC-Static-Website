@@ -596,6 +596,11 @@ ____________________________________________________________________________*/
   background-color: #f1f5fc;
 }
 
+
+.active{
+  background-color: #f1f5fc;;
+}
+
 .student-list li a .friend-name,
 .student-list li a .friend-name:hover {
   color: #777;
