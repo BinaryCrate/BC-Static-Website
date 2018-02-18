@@ -76,7 +76,7 @@ body.fixed-nav {
 
 #mainNav .navbar-collapse {
     overflow: auto;
-    max-height: 75vh;
+    max-height: 100vh;
 }
 
 #mainNav .navbar-collapse .navbar-nav .nav-item .nav-link {
@@ -214,7 +214,7 @@ body.fixed-nav {
 
 @media (min-width: 992px) {
     #mainNav.fixed-top .navbar-sidenav {
-        height: calc(100vh - 112px);
+        height: calc(100vh);
     }
     #mainNav.fixed-top .sidenav-toggler {
         position: absolute;
@@ -294,7 +294,6 @@ body.sidenav-toggled #mainNav.static-top #sidenavToggler i {
 .content-wrapper {
     overflow-x: hidden;
     background: white;
-    padding-bottom: 20px;
 }
 
 @media (min-width: 992px) {
