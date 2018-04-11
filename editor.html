@@ -77,6 +77,12 @@
           </a>
                 </li>
             </ul>
+            <ul class="navbar-nav mr-auto">
+              <div class="proj-container nav-item">
+                <h3 class="project-title">Project Title</h3>
+              </div>
+            </ul>
+
 
             <ul class="navbar-nav ml-auto">
                 <div class="dropdown nav-item shapes__dropdown">
@@ -308,7 +314,7 @@ Something else here</a>
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
     <footer class="sticky-footer">
-        <div class="container">
+        <div class="container-fluid">
             <div class="text-center">
                 <small>Copyright © Binary Crate 2018</small>
             </div>
@@ -387,8 +393,8 @@ Something else here</a>
         var delay;
         var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
             lineNumbers: true,
-            //mode: 'text/html',
-            mode: 'python',
+            mode: 'text/html',
+            //mode: 'python',
             viewportMargin: Infinity
         });
 
