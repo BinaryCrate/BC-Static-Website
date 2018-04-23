@@ -1,6 +1,15 @@
 # BC-Static-Website
 
 
+
+### Password Reset Screens
+
+forgot-password.html
+forgot-password-conf.html
+change-password.html
+password-reset-success.html
+
+
 ### CodeMirror Python/HTML,CSS
 
 1. Include JS files in header
