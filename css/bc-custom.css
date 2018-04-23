@@ -740,6 +740,20 @@ a:hover, a:active, a:focus {
   background-color: #f8f8f8
 }
 
+/*
+Forgot password
+____________________________________________________________________________*/
+
+.mother{
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+}
+
+.middle{
+  align-self: center;
+}
 
 /* Media Queires
 ____________________________________________________________________________ */
