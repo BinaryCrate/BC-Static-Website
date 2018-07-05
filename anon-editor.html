@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Binary Crate - Learn, Code, Share</title>
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Page level plugin CSS-->
+    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin.css" type="text/css" rel="stylesheet">
+    <link href="css/bc-custom.css" type="text/css" rel="stylesheet">
+    <!-- FONT AWESOME LINK -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- Code Mirror CSS -->
+    <link rel=stylesheet href="doc/docs.css">
+    <link rel=stylesheet href=lib/codemirror.css>
+    <link rel="stylesheet" href="css/bc-custom.css">
+    <script src=lib/codemirror.js></script>
+    <script src=mode/xml/xml.js></script>
+    <script src=mode/javascript/javascript.js></script>
+    <script src=mode/css/css.js></script>
+    <script src=mode/htmlmixed/htmlmixed.js></script>
+    <script src=mode/python/python.js></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#resizable" ).resizable();
+  } );
+  </script>
+
+
+</head>
+
+<body class="fixed-nav sticky-footer">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <a class="nav-link" id="sidenavToggler" style="padding: 0px 10px 0px 0px; color:white;">
+      <i class="fa fa-fw fa-bars side-nav"></i>
+    </a>
+        <a class="navbar-brand" href="index.html">Binary Crate</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                    <a class="nav-link" href="index.html">
+            <i class="fa fa-fw fa-desktop"></i>
+            <span class="nav-link-text">Dashboard</span>
+          </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Editor">
+                    <a class="nav-link" href="editor.html">
+            <i class="fa fa-fw fa-code"></i>
+            <span class="nav-link-text">Editor</span>
+          </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                    <a class="nav-link" href="classroom.html">
+            <i class="fa fa-fw fa-laptop"></i>
+            <span class="nav-link-text">Classroom</span>
+          </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="settings.html">
+            <i class="fa fa-fw fa-wrench"></i>
+            <span class="nav-link-text">Settings</span>
+          </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mr-auto">
+              <div class="proj-container nav-item">
+                <h3 class="project-title">Project Title</h3>
+              </div>
+            </ul>
+
+            <!-- RIGHT SIDE OF NAVBAR -->
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item anon-btn">
+                <button class="btn btn-default navbar-btn crt-btn run-btn" data-toggle="modal" data-target="#"><i class="far fa-play-circle"></i>Run</button>
+              </li>
+              <li class="nav-item anon-btn">
+                <button class="btn btn-default navbar-btn crt-btn save-btn" data-toggle="modal" data-target="#"><i class="fas fa-cloud"></i>Save</button>
+              </li>
+              <li class="nav-item anon-btn">
+                <button class="btn btn-default navbar-btn crt-btn signin-btn" data-toggle="modal" data-target="#">Sign In</button>
+              </li>
+              <li class="nav-item anon-btn">
+                <button class="btn btn-default navbar-btn crt-btn login-btn" data-toggle="modal" data-target="#">Log In</button>
+             </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content-wrapper " style="padding-top:1px">
+        <div class="container-fluid code-area" style="padding-left: 1px; padding-top:1px height:100%;">
+            <div class="row row-wrapper">
+                <div class=" col-ms-2">
+                    <div class="top-tree">
+                        <button class="btn btn-default navbar-btn crt-btn" data-toggle="modal" data-target="#">Add Folder</button>
+                        <button class="btn btn-default navbar-btn crt-btn" data-toggle="modal" data-target="#">Add Files</button>      
+                    </div>
+                    <ul id="compositions-list" class="pure-tree main-tree">
+                            <li>
+                              <input type="checkbox" id="trigger-views" checked="checked">
+                              <label for="trigger-views">views</label>
+                              <ul class="pure-tree">
+                                <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">Hello.html</a></li>
+                                <li>
+                                  <input type="checkbox" id="trigger-layout">
+                                  <label for="trigger-layout">layout</label>
+                                  <ul class="pure-tree">
+                                    <li>
+                                      <input type="checkbox" id="trigger-base">
+                                      <label for="trigger-base">base</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-footer">
+                                      <label for="trigger-footer">footer</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <input type="checkbox" id="trigger-partials">
+                                  <label for="trigger-partials">partials</label>
+                                  <ul class="pure-tree">
+                                    <li>
+                                      <input type="checkbox" id="trigger-header">
+                                      <label for="trigger-header">header</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-list">
+                                      <label for="trigger-list">list</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-message">
+                                      <label for="trigger-message">message</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-panel">
+                                      <label for="trigger-panel">panel</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-prompt">
+                                      <label for="trigger-prompt">prompt</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-sub-header">
+                                      <label for="trigger-sub-header">sub-header</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <input type="checkbox" id="trigger-ui">
+                                  <label for="trigger-ui">ui</label>
+                                  <ul class="pure-tree">
+                                    <li>
+                                      <input type="checkbox" id="trigger-box-color">
+                                      <label for="trigger-box-color">box-color</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-button">
+                                      <label for="trigger-button">button</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-charts">
+                                      <label for="trigger-charts">charts</label>
+                                      <ul class="pure-tree">
+                                        <li>
+                                          <input type="checkbox" id="trigger-border">
+                                          <label for="trigger-border">border</label>
+                                          <ul class="pure-tree">
+                                            <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          <input type="checkbox" id="trigger-progress">
+                                          <label for="trigger-progress">progress</label>
+                                          <ul class="pure-tree">
+                                            <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                          </ul>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-check">
+                                      <label for="trigger-check">check</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-dropdown">
+                                      <label for="trigger-dropdown">dropdown</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-input">
+                                      <label for="trigger-input">input</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-radio">
+                                      <label for="trigger-radio">radio</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-rating-stars">
+                                      <label for="trigger-rating-stars">rating-stars</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-textarea">
+                                      <label for="trigger-textarea">textarea</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-toggle">
+                                      <label for="trigger-toggle">toggle</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                </div>
+                <article id="editor" class="col-md-12 row">
+                    <textarea id="code" name=code class="col-md-5 CodeMirror ">
+<!doctype html>
+<html>
+  <head>
+    <meta charset=utf-8>
+    <title>HTML5 Demo</title>
+    <style>p {font-family: monospace;}</style>
+  </head>
+  <body>
+    <p>Canvas pane goes here:</p>
+    <canvas id=pane width=300 height=200></canvas>
+    <script>
+      var canvas = document.getElementById('pane');
+      var context = canvas.getContext('2d');
+
+      context.fillStyle = 'rgb(250,0,0)';
+      context.fillRect(10, 10, 55, 50);
+
+      context.fillStyle = 'rgba(0, 0, 250, 0.5)';
+      context.fillRect(30, 30, 55, 50);
+    </script>
+  </body>
+</html>
+</textarea>
+
+                    <div class="row col-md-5 output-col">
+                        <iframe id="preview" class="col-12 code-output"></iframe>
+                        <div id="console" class="console-editor col-12">
+                            <div class="logMessage"><span>//: </span>request sent</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+        <div class="container-fluid">
+            <div class="text-center">
+                <small>Copyright © Binary Crate 2018</small>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div class="modal fade" id="shareProj" tabindex="-1" role="dialog" aria-labelledby="shareProjLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Share Project</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label class="col-form-label" for="formGroupExampleInput">Share Link</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="http://bc.com/o82Ssdms/">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Share On: </label>
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.min.js"></script>
+    <!-- Custom scripts for this page-->
+    <script src="js/sb-admin-datatables.min.js"></script>
+    <script src="js/sb-admin-charts.min.js"></script>
+
+    <script>
+        var delay;
+        var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+            lineNumbers: true,
+            mode: 'text/html',
+            //mode: 'python',
+            viewportMargin: Infinity
+        });
+
+        editor.on("change", function() {
+            clearTimeout(delay);
+            delay = setTimeout(updatePreview, 300);
+        });
+
+        function updatePreview() {
+            var previewFrame = document.getElementById('preview');
+            var preview = previewFrame.contentDocument || previewFrame.contentWindow.document;
+            preview.open();
+            preview.write(editor.getValue());
+            preview.close();
+        }
+        setTimeout(updatePreview, 300);
+    </script>
+
+    <script>
+        ! function($) {
+
+            // Le left-menu sign
+            /* for older jquery version
+            $('#left ul.nav li.parent > a > span.sign').click(function () {
+                $(this).find('i:first').toggleClass("icon-minus");
+            }); */
+
+            $(document).on("click", "#left ul.nav li.parent > a > span.sign", function() {
+                $(this).find('i:first').toggleClass("icon-minus");
+            });
+
+            // Open Le current menu
+            $("#left ul.nav li.parent.active > a > span.sign").find('i:first').addClass("icon-minus");
+            $("#left ul.nav li.current").parents('ul.children').addClass("in");
+
+        }(window.jQuery);
+    </script>
+
+
+    </div>
+</body>
+
+</html>
