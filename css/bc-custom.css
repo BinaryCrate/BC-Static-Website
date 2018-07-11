@@ -51,7 +51,8 @@ Date Last Updated:
     padding-right: 4px;
 }
 .signin-btn,
-.login-btn{
+.login-btn,
+.feedback-btn{
     width: 113px;
     border-radius: 10px;
 }
