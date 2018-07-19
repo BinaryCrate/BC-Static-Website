@@ -61,7 +61,7 @@ Date Last Updated:
 .share-btn {
     padding-right: 25px;
 }
- 
+
 .save-btn{
     width: 83px;
 }
@@ -696,31 +696,31 @@ ____________________________________________________________________________ */
 }
 
 
-/* CMS Styles 
+/* CMS Styles
 ____________________________________________________________________________ */
 
 .card{
     margin-top: 40px;
-    margin-left: 50px; 
+    margin-left: 50px;
     box-shadow: 5px 5px 22px 0 rgba(0, 0, 0, 0.2);
   }
-  
+
   .card-img-top{
     width: 430px;
     height: 145.2px;
     background-color: #272d34;
   }
-  
+
   .card-title{
     padding: 0px;
-    margin: 0px; 
+    margin: 0px;
   }
-  
+
   .card-body{
     margin:0px;
-    
+
   }
-  
+
   .card-text{
     width: 246px;
     height: 80px;
@@ -732,14 +732,14 @@ ____________________________________________________________________________ */
     letter-spacing: normal;
     color: #3f4a58;
     color: var(--gunmetal-four);
-    padding-top: 19px; 
+    padding-top: 19px;
   }
-  
+
   .btn{
-    float: right; 
+    float: right;
   }
-  
-  
+
+
   .tb-grid{
     display: grid;
     grid-gap:10px;
@@ -769,13 +769,13 @@ ____________________________________________________________________________ */
     grid-row: 3;
     place-self: center stretch;
   }
-  
+
   .e{
     grid-column:1 ;
     grid-row: 2/3;
     place-self: center stretch;
   }
-  
+
   .labs-stats{
     display:inline;
     font-size: 12px;
@@ -793,11 +793,11 @@ ____________________________________________________________________________ */
     border-radius: 10px;
     box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.25);
     background-color: #ffffff;
-    border: solid 1px #50e3c2;    
+    border: solid 1px #50e3c2;
     color: #000;
     text-align: center;
     font-size: 14px;
-    font-weight:bold; 
+    font-weight:bold;
 
 }
 
@@ -829,7 +829,7 @@ ____________________________________________________________________________ */
 }
 
 .labs-filter-item{
-    font-size: 14px; 
+    font-size: 14px;
     font-weight:bold;
     color: #fff;
     text-align: center;
@@ -839,7 +839,7 @@ ____________________________________________________________________________ */
 }
 
 
-/* Content section 
+/* Content section
 __________________________________________________________________*/
 
 .main-lab{
@@ -851,6 +851,7 @@ __________________________________________________________________*/
 }
 .main-content{
     margin-top:22px;
+    padding-bottom: 100px;
 }
 
 .main-content p{
@@ -897,7 +898,7 @@ __________________________________________________________________*/
     border-radius: 8px;
 }
 #compositions-list{
-    padding-left:5px; 
+    padding-left:5px;
 }
 .pure-tree {
   text-align: left;
@@ -962,7 +963,7 @@ __________________________________________________________________*/
 
 /* Tree Structure
 ____________________________________________________________________________*/
-/* 
+/*
 .top-tree {
     padding: 5px;
 }

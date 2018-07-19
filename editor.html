@@ -101,10 +101,6 @@ Something else here</a>
                 <li class="nav-item share-btn">
                     <button class="btn btn-default navbar-btn crt-btn" data-toggle="modal" data-target="#shareProj">Share</button>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
-                </li>
             </ul>
         </div>
     </nav>
@@ -117,162 +113,173 @@ Something else here</a>
                         <span class="fa fa-1x fa-file-code-o"></span>
                         <span class="fa fa-1x fa-folder-o"></span>
                     </div>
-                    <ol class="tree">
-                        <li>
-                            <label for="menu-1">menu-1</label>
-                            <input type="checkbox" checked id="menu-1" />
-                            <ol>
+                    <ul id="compositions-list" class="pure-tree main-tree">
+                            <li>
+                              <input type="checkbox" id="trigger-views" checked="checked">
+                              <label for="trigger-views">views</label>
+                              <ul class="pure-tree">
+                                <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">Hello.html</a></li>
                                 <li>
-                                    <label for="menu-1-1">menu-1-1</label>
-                                    <input type="checkbox" id="menu-1-1" />
-                                    <ol>
-                                        <li class="">
-                                            <label for="menu-1-1-1">menu-1-1-1</label>
-                                            <input type="checkbox" id="menu-1-1-1" />
-                                            <ol>
-                                                <li>
-                                                    <label for="menu-1-1-1-1">menu-1-1-1-1</label>
-                                                    <input type="checkbox" id="menu-1-1-1-1" />
-                                                    <ol>
-                                                        <li class="file"><a href="">menu-1-1-1-1-1</a></li>
-                                                        <li class="file"><a href="">menu-1-1-1-1-2</a></li>
-                                                        <li class="file"><a href="">menu-1-1-1-1-3</a></li>
-                                                    </ol>
-                                                </li>
-                                                <li class="file"><a href="">menu-1-1-1-2</a></li>
-                                                <li class="file"><a href="">menu-1-1-1-3</a></li>
-                                                <li class="file"><a href="">menu-1-1-1-4</a></li>
-                                                <li class="file"><a href="">menu-1-1-1-5</a></li>
-                                                <li class="file"><a href="">menu-1-1-1-6</a></li>
-                                            </ol>
-                                        </li>
-                                        <li class="file"><a href="">menu-1-1-2</a></li>
-                                        <li class="file"><a href="">menu-1-1-3</a></li>
-                                        <li class="file"><a href="">menu-1-1-4</a></li>
-                                    </ol>
+                                  <input type="checkbox" id="trigger-layout">
+                                  <label for="trigger-layout">layout</label>
+                                  <ul class="pure-tree">
+                                    <li>
+                                      <input type="checkbox" id="trigger-base">
+                                      <label for="trigger-base">base</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-footer">
+                                      <label for="trigger-footer">footer</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                  </ul>
                                 </li>
-                                <li class="file"><a href="">menu-1-2</a></li>
-                                <li class="file"><a href="">menu-1-3</a></li>
-                            </ol>
-                        </li>
-
-                        <li>
-                            <label for="menu-2">menu-2</label>
-                            <input type="checkbox" id="menu-2" />
-                            <ol>
                                 <li>
-                                    <label for="menu-2-1">menu-2-1</label>
-                                    <input type="checkbox" id="menu-2-1" />
-                                    <ol>
+                                  <input type="checkbox" id="trigger-partials">
+                                  <label for="trigger-partials">partials</label>
+                                  <ul class="pure-tree">
+                                    <li>
+                                      <input type="checkbox" id="trigger-header">
+                                      <label for="trigger-header">header</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-list">
+                                      <label for="trigger-list">list</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-message">
+                                      <label for="trigger-message">message</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-panel">
+                                      <label for="trigger-panel">panel</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-prompt">
+                                      <label for="trigger-prompt">prompt</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-sub-header">
+                                      <label for="trigger-sub-header">sub-header</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <input type="checkbox" id="trigger-ui">
+                                  <label for="trigger-ui">ui</label>
+                                  <ul class="pure-tree">
+                                    <li>
+                                      <input type="checkbox" id="trigger-box-color">
+                                      <label for="trigger-box-color">box-color</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-button">
+                                      <label for="trigger-button">button</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-charts">
+                                      <label for="trigger-charts">charts</label>
+                                      <ul class="pure-tree">
                                         <li>
-                                            <label for="menu-2-1-1">menu-2-1-1</label>
-                                            <input type="checkbox" id="menu-2-1-1" />
-                                            <ol>
-                                                <li class="file"><a href="">menu-2-1-1-1</a></li>
-                                                <li class="file"><a href="">menu-2-1-1-2</a></li>
-                                                <li class="file"><a href="">menu-2-1-1-3</a></li>
-                                                <li class="file"><a href="">menu-2-1-1-4</a></li>
-                                                <li class="file"><a href="">menu-2-1-1-5</a></li>
-                                            </ol>
+                                          <input type="checkbox" id="trigger-border">
+                                          <label for="trigger-border">border</label>
+                                          <ul class="pure-tree">
+                                            <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                          </ul>
                                         </li>
-                                        <li class="file"><a href="">menu-2-1-2</a></li>
-                                        <li class="file"><a href="">menu-2-1-3</a></li>
-                                        <li class="file"><a href="">menu-2-1-4</a></li>
-                                    </ol>
-                                </li>
-                                <li class="file"><a href="">menu-2-2</a></li>
-                                <li class="file"><a href="">menu-2-3</a></li>
-                            </ol>
-                        </li>
-
-                        <li>
-                            <label for="menu-3">menu-3</label>
-                            <input type="checkbox" id="menu-3" />
-                            <ol>
-                                <li>
-                                    <label for="menu-3-1">menu-3-1</label>
-                                    <input type="checkbox" id="menu-3-1" />
-                                    <ol>
                                         <li>
-                                            <label for="menu-3-1-1">menu-3-1-1</label>
-                                            <input type="checkbox" id="menu-3-1-1" />
-                                            <ol>
-                                                <li class="file"><a href="">menu-3-1-1-1</a></li>
-                                                <li class="file"><a href="">menu-3-1-1-2</a></li>
-                                                <li class="file"><a href="">menu-3-1-1-3</a></li>
-                                                <li class="file"><a href="">menu-3-1-1-4</a></li>
-                                                <li class="file"><a href="">menu-3-1-1-5</a></li>
-                                            </ol>
+                                          <input type="checkbox" id="trigger-progress">
+                                          <label for="trigger-progress">progress</label>
+                                          <ul class="pure-tree">
+                                            <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                          </ul>
                                         </li>
-                                        <li class="file"><a href="">menu-3-1-2</a></li>
-                                        <li class="file"><a href="">menu-3-1-3</a></li>
-                                        <li class="file"><a href="">menu-3-1-4</a></li>
-                                    </ol>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-check">
+                                      <label for="trigger-check">check</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-dropdown">
+                                      <label for="trigger-dropdown">dropdown</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-input">
+                                      <label for="trigger-input">input</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-radio">
+                                      <label for="trigger-radio">radio</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-rating-stars">
+                                      <label for="trigger-rating-stars">rating-stars</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-textarea">
+                                      <label for="trigger-textarea">textarea</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <input type="checkbox" id="trigger-toggle">
+                                      <label for="trigger-toggle">toggle</label>
+                                      <ul class="pure-tree">
+                                        <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                                      </ul>
+                                    </li>
+                                  </ul>
                                 </li>
-                                <li class="file"><a href="">menu-3-2</a></li>
-                                <li class="file"><a href="">menu-3-3</a></li>
-                            </ol>
-                        </li>
-
-                        <li>
-                            <label for="menu-4">menu-4</label>
-                            <input type="checkbox" id="menu-4" />
-                            <ol>
-                                <li>
-                                    <label for="menu-4-1">menu-4-1</label>
-                                    <input type="checkbox" id="menu-4-1" />
-                                    <ol>
-                                        <li>
-                                            <label for="menu-4-1-1">menu-4-1-1</label>
-                                            <input type="checkbox" id="menu-4-1-1" />
-                                            <ol>
-                                                <li class="file"><a href="">menu-4-1-1-1</a></li>
-                                                <li class="file"><a href="">menu-4-1-1-2</a></li>
-                                                <li class="file"><a href="">menu-4-1-1-3</a></li>
-                                                <li class="file"><a href="">menu-4-1-1-4</a></li>
-                                                <li class="file"><a href="">menu-4-1-1-5</a></li>
-                                            </ol>
-                                        </li>
-                                        <li class="file"><a href="">menu-4-1-2</a></li>
-                                        <li class="file"><a href="">menu-4-1-3</a></li>
-                                        <li class="file"><a href="">menu-4-1-4</a></li>
-                                    </ol>
-                                </li>
-                                <li class="file"><a href="">menu-4-2</a></li>
-                                <li class="file"><a href="">menu-4-3</a></li>
-                            </ol>
-                        </li>
-
-                        <li>
-                            <label for="menu-5">menu-5</label>
-                            <input type="checkbox" id="menu-5" />
-                            <ol>
-                                <li>
-                                    <label for="menu-5-1">menu-5-1</label>
-                                    <input type="checkbox" id="menu-5-1" />
-                                    <ol>
-                                        <li>
-                                            <label for="menu-5-1-1">menu-5-1-1</label>
-                                            <input type="checkbox" id="menu-5-1-1" />
-                                            <ol>
-                                                <li class="file"><a href="">menu-5-1-1-1</a></li>
-                                                <li class="file"><a href="">menu-5-1-1-2</a></li>
-                                                <li class="file"><a href="">menu-5-1-1-3</a></li>
-                                                <li class="file"><a href="">menu-5-1-1-4</a></li>
-                                                <li class="file"><a href="">menu-5-1-1-5</a></li>
-                                            </ol>
-                                        </li>
-                                        <li class="file"><a href="">menu-5-1-2</a></li>
-                                        <li class="file"><a href="">menu-5-1-3</a></li>
-                                        <li class="file"><a href="">menu-5-1-4</a></li>
-                                    </ol>
-                                </li>
-                                <li class="file"><a href="">menu-5-2</a></li>
-                                <li class="file"><a href="">menu-5-3</a></li>
-                            </ol>
-                        </li>
-
-                    </ol>
+                              </ul>
+                            </li>
+                          </ul>
                 </div>
                 <article id="editor" class="col-md-12 row">
                     <textarea id="code" name=code class="col-md-5 CodeMirror ">
